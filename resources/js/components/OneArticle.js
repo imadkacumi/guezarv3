@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-function Test() {
+function OneArticle () {
     return (
         <div className="container">
             <div className="row justify-content-center">
@@ -15,10 +15,10 @@ function Test() {
             </div>
         </div>
     );
-}
+};
 
 export default Test;
 
-if (document.getElementById('root')) {
-    ReactDOM.render(<Test />, document.getElementById('root'));
-}
+if (document.getElementById('one-article')) {
+    ReactDOM.render(<OneArticle />, document.getElementById('one-article'));
+};

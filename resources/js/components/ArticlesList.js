@@ -1,7 +1,7 @@
 import { components } from 'react';
 import ReactDOM from 'react-dom';
 
-function Example() {
+function ArticlesList () {
     return (
         <div className="container">
             <div className="row justify-content-center">
@@ -15,10 +15,10 @@ function Example() {
             </div>
         </div>
     );
-}
+};
 
-export default Example;
+export default ArticlesList;
 
-if (document.getElementById('example')) {
-    ReactDOM.render(<Example />, document.getElementById('example'));
-}
+if (document.getElementById('articles-list')) {
+    ReactDOM.render(<ArticlesList />, document.getElementById('articles-list'));
+};
