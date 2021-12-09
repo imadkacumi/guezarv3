@@ -20,6 +20,6 @@ use App\Http\Controllers\ClientController;
 
 Route::get('/', [ClientController::class, 'home']);
 Route::get('/paiement', [ClientController::class, 'paiement']);
-Route::get('/shop', [ClientController::class, 'shop']);
+Route::get('/shop', [ClientController::class, 'shop'])->name('articles');
 Route::get('/panier', [ClientController::class, 'panier']);
 Route::get('/login', [ClientController::class, 'login']);
