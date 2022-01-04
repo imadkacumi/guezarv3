@@ -65,8 +65,8 @@
 					</div>
 
 					<div class="text-center p-t-90">
-						<a class="txt1" href="#">
-							Forgot Password?
+						<a class="txt1" href="{{url('/signup')}}">
+							Vous n'avez pas de compte ? S'inscrire
 						</a>
 					</div>
 				</form>

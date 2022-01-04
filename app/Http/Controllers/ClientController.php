@@ -21,4 +21,7 @@ class ClientController extends Controller
     public function login(){
         return view('client.login');
     }
+    public function orders(){
+        return view('admin.orders');
+    }
 }
