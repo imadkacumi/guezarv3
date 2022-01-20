@@ -2,7 +2,7 @@
 @extends('admin_layout.admin')
 
 @section('title')
-   Ajouter une Categorie
+   Modifier une Catégorie
 @endsection
 
 
@@ -16,7 +16,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Category</h1>
+            <h1>Categories</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -37,7 +37,7 @@
             <!-- jquery validation -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Add category</small></h3>
+                <h3 class="card-title">Modifier le nom de la categorie</small></h3>
               </div>
 
               @if (count($errors) > 0)
@@ -57,15 +57,17 @@
               <!-- /.card-header -->
               <!-- form start -->
               {{-- <form> --}}
-              {!!Form::open(['action' => 'App\Http\Controllers\CategoryController@savecategory', 'method' => 'POST'])!!}
+              {!!Form::open(['action' => 'App\Http\Controllers\CategoryController@updatecategory', 'method' => 'POST'])!!}
               {{ csrf_field() }}
                 <div class="card-body">
                   <div class="form-group">
-                   {{--  <label for="exampleInputEmail1">Category name</label>
+                   {{Form::hidden('id', $category->id)}}
+                   
+                    {{--  <label for="exampleInputEmail1">Category name</label>
                     <input type="text" name="category_name" class="form-control" id="exampleInputEmail1" placeholder="Enter category"> --}}
                  {{Form::label('', 'Nom de la Catégorie', ['for'=>'exempleInputEmail'])}}
                   
-                  {{Form::text('category_name', '', ['class' => 'form-control', 'id' => 'exampleInputEmail', 'placeholder' => 'Entrez le nom de la categorie'])}} 
+                  {{Form::text('category_name', $category->category_name, ['class' => 'form-control', 'id' => 'exampleInputEmail', 'placeholder' => 'Entrez le nom de la categorie'])}} 
                  
                   </div>
                 </div>
@@ -73,7 +75,7 @@
                 <div class="card-footer">
                   <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
                   {{-- <input type="submit" class="btn btn-primary" value="Save" > --}}
-                {{Form::submit('Save', ['class' => 'btn btn-primary'])}}
+                {{Form::submit('Modifier', ['class' => 'btn btn-primary'])}}
                 </div>
                 {!! Form::close() !!}
               {{-- </form> --}}
@@ -97,8 +99,8 @@
 
 @section('scripts')
 <!-- jquery-validation -->
-<script src="../../plugins/jquery-validation/jquery.validate.min.js"></script>
-<script src="../../plugins/jquery-validation/additional-methods.min.js"></script>
+<script src="{{asset('backend/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
+<script src="{{asset('backend/plugins/jquery-validation/additional-methods.min.js')}}"></script>
 
 
 <script>
