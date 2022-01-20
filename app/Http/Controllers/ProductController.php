@@ -14,38 +14,37 @@ class ProductController extends Controller
         return view('admin.addproduct')->with('categories', $categories);
     }
     public function saveproduct(Request $request){
-            $this->validate($request, ['product_name' => 'required' , 
-                                        'product_price' => 'required',
-                                       'product_category' => 'required',
-                                       'product_image' => 'image|nullable|max:1999']);
-                                       
-                                       
-            if($request->hasFile('product_image')){
-                    $fileNameWithExt = $request->file('product_image')->getClientOriginalName();
+        
+        $this->validate($request, ['product_name' => 'required', 'product_price' => 'required', 'product_category' => 'required', 'product_image' => 'image|nullable|max:1999']);
 
-                    $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+                             
+        if ($request->hasFile('product_image')) {
+            $fileNameWithExt = $request->file('product_image')->getClientOriginalName();
 
-                    $extension = $request->file('product_image')->getClientOriginalExtension();
+            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
 
-                    $fileNameToStore = $fileName.'_'.time().'.'.$extension;
+            $extension = $request->file('product_image')->getClientOriginalExtension();
 
-                    $path =$request->file('product_image')->storeAs('public/product_images', 
-                    $fileNameToStore);
+            $fileNameToStore = $fileName.'_'.time().'.'.$extension;
 
-                    return back()->with('status', 'Le produit a été enregistrée avec succès !!!');
-                }
-            else{
-                $fileNameToStore = 'noimage.jpg';
-            }
+            $path =$request->file('product_image')->storeAs('public/product_images', 
+            $fileNameToStore);
 
+            
+        } 
+        else {
+            $fileNameToStore = 'noimage.jpg';
+        }
 
-            $product = new Product();
-            $product->product_name = $request->input('product_name');
-            $product->product_price = $request->input('product_price');
-            $product->product_category = $request->input('product_category');
-            $product->product_image = $fileNameToStore;
+        $product = new Product();
+        $product->product_name = $request->input('product_name');
+        $product->product_price = $request->input('product_price');
+        $product->product_category = $request->input('product_category');
+        $product->product_image = $fileNameToStore;
 
-            $product->save();
+        $product->save();
+
+        return back()->with('status', 'Le produit a été enregistrée avec succès !!!');
     }
 
     public function products(){
