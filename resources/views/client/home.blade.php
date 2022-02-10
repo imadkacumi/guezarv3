@@ -28,8 +28,8 @@
 			  <div class="row no-gutters ftco-services">
 		<div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
 		  <div class="media block-6 services mb-md-0 mb-4">
-			<div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
-				  <span class="flaticon-shipped"></span>
+			<div class=" bg-color-1 active d-flex justify-content-center align-items-center mb-2">
+				  <span class="1ericone"></span>
 			</div>
 			<div class="media-body">
 			  <h3 class="heading">Free Shipping</h3>

@@ -35,7 +35,7 @@
         $storedItem['product_price'] = $item->product_price;
         $storedItem['product_image'] = $item->product_image;
         $this->totalQty++;
-        $this->totalPrice = $item->product_price;
+        $this->totalPrice =+ $item->product_price;
         $this->items[$product_id] = $storedItem;
 
         }
