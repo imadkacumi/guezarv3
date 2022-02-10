@@ -2,7 +2,7 @@
 @extends('admin_layout.admin')
 
 @section('title')
-   Ajouter un Slider
+   Modifier un Slider
 @endsection
 
 @section('content')
@@ -34,7 +34,7 @@
             <!-- jquery validation -->
             <div class="card card-warning">
               <div class="card-header">
-                <h3 class="card-title">Add slider</h3>
+                <h3 class="card-title">Modifier slider</h3>
               </div>
               @if (count($errors) > 0)
                 <div class="alert alert-danger">
@@ -53,21 +53,22 @@
               <!-- /.card-header -->
               <!-- form start -->
               {{-- <form > --}}
-                {!! Form::open(['action' => 'App\Http\Controllers\SliderController@saveslider' , 'method' => 'POST' , 'enctype' => 'multipart/form-data']) !!}
+                {!! Form::open(['action' => 'App\Http\Controllers\SliderController@updateslider' , 'method' => 'POST' , 'enctype' => 'multipart/form-data']) !!}
                 {{ csrf_field() }}
                 <div class="card-body">
                   <div class="form-group">
                     {{-- <label for="exampleInputEmail1">Slider description 1</label>
                     <input type="text" name="description1" class="form-control" id="exampleInputEmail1" placeholder="Enter slider description"> --}}
-                  {!! Form::label('', 'Descripton one', ['for' => 'exampleInputEmail1']) !!}
-                  {!! Form::text('description1', '', ['class' => 'form-control', 'id' => 'exampleInputEmail1' , 'placeholder' => 'Enter description one']) !!}
+                  {!! Form::hidden('id', $slider->id) !!}
+                    {!! Form::label('', 'Descripton one', ['for' => 'exampleInputEmail1']) !!}
+                  {!! Form::text('description1', $slider->description1, ['class' => 'form-control', 'id' => 'exampleInputEmail1' , 'placeholder' => 'Enter description one']) !!}
                 </div>
                   <div class="form-group">
                     {{-- <label for="exampleInputEmail1">Slider description 2</label>
                     <input type="text" name="description2" class="form-control" id="exampleInputEmail1" placeholder="Enter slider description"> --}}
                  
                     {!! Form::label('', 'Descripton two', ['for' => 'exampleInputEmail1']) !!}
-                    {!! Form::text('description2', '', ['class' => 'form-control', 'id' => 'exampleInputEmail1' , 'placeholder' => 'Enter description two']) !!}
+                    {!! Form::text('description2', $slider->description2, ['class' => 'form-control', 'id' => 'exampleInputEmail1' , 'placeholder' => 'Enter description two']) !!}
                   </div>
                   <label for="exampleInputFile">Slider image</label>
                   <div class="input-group">
@@ -87,7 +88,7 @@
                 <div class="card-footer">
                   <!-- <button type="submit" class="btn btn-warning">Submit</button> -->
                  {{--  <input type="submit" class="btn btn-warning" value="Save" > --}}
-                  {!! Form::submit('Save', ['class' => 'btn btn-warning']) !!}
+                  {!! Form::submit('update', ['class' => 'btn btn-warning']) !!}
                 </div>
                 {!! Form::close() !!}
               </form>

@@ -31,23 +31,21 @@
   <body class="goto-here">
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Vegefoods</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> 
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-			  <li class="nav-item active"><a href="{{('/')}}" class="nav-link">Home</a></li>
-			  <li class="nav-item active"><a href="{{('/shop')}}" class="nav-link">shop</a></li>
-	          
-	          <li class="nav-item cta cta-colored"><a href="{{('/panier')}}" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-
-			  <li class="nav-item active"><a href="login.html" class="nav-link"><span class="fa fa-user"></span>Login</a></li>
-	        </ul>
+			<a class="navbar-brand" href="{{('/')}}"><img src="frontend/images/logo.png"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="oi oi-menu"></span> 
+			</button>
+  
+			<div class="collapse navbar-collapse" id="ftco-nav">
+			  <ul class="navbar-nav ml-auto">
+				<li class="nav-item active"><a href="{{('/')}}" class="nav-link">Accueil</a></li>
+				<li class="nav-item active"><a href="{{('/shop')}}" class="nav-link">Shop</a></li>
+				
+				<li class="nav-item aclive"><a href="{{('/panier')}}" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+  
+			  </ul>
+			</div>
 		  </div>
-		  
-	    </div>
 	  </nav>
     <!-- END nav -->
 
