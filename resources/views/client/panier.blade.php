@@ -49,6 +49,7 @@
 									</form>
 								
 								  </td>
+								  {{-- changement --}}
 								  	{{$total = $product['product_price'] * $product['qty']}}
 									<td class="total">{{$total}}</td>
 									
