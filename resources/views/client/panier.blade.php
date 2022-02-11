@@ -50,8 +50,7 @@
 									
 										
 								  </td>
-									
-									{{-- <td class="total">{{$product['product_price']*$product['qty']}}</td> --}}
+									<td class="total">{{$product['product_price']*$product['qty']}}</td>
 								  </tr><!-- END TR-->
 								@endforeach
 						    </tbody>
