@@ -14,7 +14,7 @@ class ClientController extends Controller
     public function home(){
         $sliders = Slider::All()->where('status', 1);
 
-        $products = Product::All()->where('status', 1);
+        $products = Product::All()->where('status', 1)->where('status2', 1);
         return view('client.home')->with('sliders', $sliders)->with('products', $products);
     }
     public function paiement(){

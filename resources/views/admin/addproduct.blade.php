@@ -72,7 +72,7 @@
                     <input type="number" name="product_price" class="form-control" id="exampleInputEmail1" placeholder="Enter product price" min="1"> --}}
 
                     {!! Form::label('', 'Product price', ['for' => 'exampleInputEmail']) !!}
-                    {!! Form::text('product_price', '', ['class' => 'form-control' , 'id' => 'exampleInputEmail', 'placeholder' => 'Enter product price']) !!}
+                    {!! Form::number('product_price', '', ['class' => 'form-control' , 'id' => 'exampleInputEmail', 'placeholder' => 'Enter product price', 'step' => '0.1']) !!}
                   </div>
                   <div class="form-group">
                     {{-- <label>Product category</label> --}}
