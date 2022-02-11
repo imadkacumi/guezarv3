@@ -49,13 +49,7 @@
 									</form>
 								
 								  </td>
-
-								  	{{-- {{ dd($product) }} --}}
-
-								  	{{$total = $product['product_price'] * $product['qty']}}
-									<td class="total">{{$total}}</td>
-									
-									
+									<td class="total">{{$product['product_price'] * $product['qty']}}</td>
 								  </tr><!-- END TR-->
 								@endforeach
 						    </tbody>
