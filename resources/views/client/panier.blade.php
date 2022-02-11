@@ -47,11 +47,12 @@
 											<input type="number" name="quantity" class="quantity form-control input-number" value="{{$product['qty']}}" min="1" max="100">
 										</div>
 									</form>
-									
-										
+								
 								  </td>
+								  	{{$total = $product['product_price'] * $product['qty']}}
+									<td class="total">{{$total}}</td>
 									
-									{{-- <td class="total">{{$product['product_price']*$product['qty']}}</td> --}}
+									
 								  </tr><!-- END TR-->
 								@endforeach
 						    </tbody>

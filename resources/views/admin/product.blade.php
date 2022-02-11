@@ -76,6 +76,11 @@
                       @else
                       <a href="{{url('/activer_product/'.$product->id)}}" class="btn btn-warning">Activer</a>
                       @endif
+                      @if ($product->status2 != 0)
+                        <a href="{{url('/desactiver_productacc/'.$product->id)}}" class="btn btn-success">X</a>
+                      @else
+                      <a href="{{url('/activer_productacc/'.$product->id)}}" class="btn btn-warning">V</a>
+                      @endif
                         <a href="{{url('/edit_product/'.$product->id)}}" class="btn btn-primary"><i class="nav-icon fas fa-edit"></i></a>
                         <a href="{{url('/delete_product/'.$product->id)}}" id="delete" class="btn btn-danger" ><i class="nav-icon fas fa-trash"></i></a>
                       </td>

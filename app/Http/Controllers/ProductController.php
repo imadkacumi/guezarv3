@@ -17,7 +17,7 @@ class ProductController extends Controller
     }
     public function saveproduct(Request $request){
             $this->validate($request, ['product_name' => 'required' , 
-                                        'product_price' => 'required',
+                                        'product_price' => 'required|between:0,99.99',
                                        'product_category' => 'required',
                                        'product_image' => 'image|nullable|max:1999']);
                                        
@@ -48,6 +48,7 @@ class ProductController extends Controller
             $product->product_category = $request->input('product_category');
             $product->product_image = $fileNameToStore;
             $product->status = 1;
+            $product->status2 = 1;
 
             $product->save();
 
@@ -67,6 +68,24 @@ class ProductController extends Controller
         $product = Product::find($id);
 
         $product->status = 0;
+
+        $product->save();
+
+        return back();
+    }
+    public function activer_productacc($id){
+        $product = Product::find($id);
+
+        $product->status2 = 1;
+
+        $product->save();
+
+        return back();
+    }
+    public function desactiver_productacc($id){
+        $product = Product::find($id);
+
+        $product->status2 = 0;
 
         $product->save();
 
