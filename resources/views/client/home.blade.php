@@ -28,45 +28,45 @@
 			  <div class="row no-gutters ftco-services">
 		<div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
 		  <div class="media block-6 services mb-md-0 mb-4">
-			<div class=" bg-color-1 active d-flex justify-content-center align-items-center mb-2">
-				  <div class="1ericone"></div>
+			<div class=" active d-flex justify-content-center align-items-center mb-2">
+				<img class="icone" src="frontend/images/icone1v1.png">
 			</div>
 			<div class="media-body">
-			  <h3 class="heading">Free Shipping</h3>
+			  <h3 class="heading">Livraison</h3>
 			  <span>On order over $100</span>
 			</div>
 		  </div>      
 		</div>
 		<div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
 		  <div class="media block-6 services mb-md-0 mb-4">
-			<div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
-				  <span class="flaticon-diet"></span>
+			<div class="d-flex justify-content-center align-items-center mb-2">
+				<img class="icone" src="frontend/images/icone2v1.png">
 			</div>
 			<div class="media-body">
-			  <h3 class="heading">Always Fresh</h3>
+			  <h3 class="heading">Viandes Fraîche</h3>
 			  <span>Product well package</span>
 			</div>
 		  </div>    
 		</div>
 		<div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
 		  <div class="media block-6 services mb-md-0 mb-4">
-			<div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
-				  <span class="flaticon-award"></span>
+			<div class=" d-flex justify-content-center align-items-center mb-2">
+				<img class="icone" src="frontend/images/icones3v1.png">
 			</div>
 			<div class="media-body">
-			  <h3 class="heading">Superior Quality</h3>
+			  <h3 class="heading">Halal Meat</h3>
 			  <span>Quality Products</span>
 			</div>
 		  </div>      
 		</div>
 		<div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
 		  <div class="media block-6 services mb-md-0 mb-4">
-			<div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
-				  <span class="flaticon-customer-service"></span>
+			<div class=" d-flex justify-content-center align-items-center mb-2">
+				<img class="icone" src="frontend/images/icone4v1.png">
 			</div>
 			<div class="media-body">
 			  <h3 class="heading">Support</h3>
-			  <span>24/7 Support</span>
+			  <span>Horaires</span>
 			</div>
 		  </div>      
 		</div>
@@ -114,7 +114,7 @@
 	  </div>
   </section>
 	  
-	  <section class="ftco-section img" style="background-image: url(frontend/images/bggg.jpg);">
+	  <section class="ftco-section img" style="background-image: url(frontend/images/boucherie-halal.jpeg);">
 	  <div class="container">
 			  <div class="row justify-content-end">
 		<div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">

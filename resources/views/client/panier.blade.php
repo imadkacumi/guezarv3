@@ -46,14 +46,15 @@
 											<div class="input-group mb-3">
 											<input type="number" name="quantity" class="quantity form-control input-number" value="{{$product['qty']}}" min="1" max="100">
 										</div>
+										<input type="submit" class="btn btn-success" value="Valider">
 									</form>
 								
 								  </td>
 
 								  	{{-- {{ dd($product) }} --}}
 
-								  	{{$total = $product['product_price'] * $product['qty']}}
-									<td class="total">{{$total}}</td>
+								  {{-- 	{{$total = $product['product_price'] * $product['qty']}} --}}
+									<td class="total">{{$product['product_price'] * $product['qty']}}</td>
 									
 									
 								  </tr><!-- END TR-->
@@ -63,7 +64,7 @@
 					  </div>
     			</div>
     		</div>
-    		<div class="row justify-content-end">
+    		{{-- <div class="row justify-content-end">
     			<div class="col-lg-4 mt-5 cart-wrap ftco-animate">
     				<div class="cart-total mb-3">
     					<h3>Coupon Code</h3>
@@ -97,7 +98,7 @@
 	            </form>
     				</div>
     				<p><a href="checkout.html" class="btn btn-primary py-3 px-4">Estimate</a></p>
-    			</div>
+    			</div> --}}
     			<div class="col-lg-4 mt-5 cart-wrap ftco-animate">
     				<div class="cart-total mb-3">
     					<h3>Cart Totals</h3>
@@ -116,7 +117,7 @@
     					<hr>
     					<p class="d-flex total-price">
     						<span>Total</span>
-    						<span>$17.60</span>
+    						<span>€{{Session::has('cart') ? Session::get('cart')->totalPrice : '0'}}</span>
     					</p>
     				</div>
     				<p><a href="{{('/paiement')}}" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>

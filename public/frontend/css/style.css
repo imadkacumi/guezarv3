@@ -8645,7 +8645,9 @@ h1, h2, h3, h4, h5,
     .product-category li a.active {
       background: black;
       color: #fff; }
-
+.icone{
+  width: 80%;
+}
 .ftco-product .owl-carousel .owl-stage-outer {
   padding-bottom: 2em;
   position: relative; }
